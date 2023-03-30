@@ -1,0 +1,92 @@
+
+
+.sidebar{
+    width: 200px;
+    margin: 0;
+    padding: 0;
+    background-color: #181c2e; /*Cor da area do aside*/
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar div{
+    background: url('../../assets/box.png');
+    background-color: #181c2e;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 20%;
+}
+
+.sidebar div{
+    padding-top: 30px;
+}
+
+.sidebar div img{
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(2px 3px 6px #121212);
+    -webkit-filter: drop-shadow(2px 3px 6px #121212);
+}
+
+.sidebar a{
+    display: block;
+    padding: 16px;
+    display: flex;
+    text-decoration: none;
+    color: rgba(255,255,255, 0.7);
+    flex-direction: row;
+    align-items: center;
+    transition: ease-in-out 0.4s; /*Transição de quando passar o mouse em cima*/
+}
+
+.sidebar a svg{
+    margin-right: 0.5rem;
+}
+
+.sidebar a:hover{
+    background-color: #121212; /*Cor de texto branca e fundo cinza*/
+    color: #FFF;
+
+}
+
+.content{
+    margin-left: 220px;
+    padding: 1 16px;
+}
+
+@media screen and (max-width: 700px){ /*Se a tela for minimizada e passar dos 700px a parte de sidebar, vai ocupar a altura */
+    .sidebar{
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    div.content{
+        margin-left: 0;
+    }
+    .sidebar a{
+        float: left; 
+    }
+    .sidebar div{
+        display: none; /*Parte da foto ira sumir*/
+    }
+    .sidebar a svg{
+        display: none; /*Icons irão desaparcer*/
+    }
+}
+
+@media screen and (max-width: 400px){
+    .sidebar a{
+        text-align: center;
+        float: none;
+    }
+
+    .sidebar a svg{
+        display: none;
+    }
+}
